@@ -19,7 +19,7 @@
             // create XHR Object
             let xhr = new XMLHttpRequest();
             // OPEN - type, url/file, async
-            xhr.open('GET', 'sample.txt', true)
+            xhr.open('GET', 'sample2.txt', true)
 
             console.log('READYSTATE: ', xhr.readyState)
 
@@ -33,6 +33,8 @@
                 if (this.status == 200) {
                     // console.log(this.responseText);
                     document.getElementById('text').innerHTML = this.responseText
+                } else if (this.status == 404) {
+                    document.getElementById('text').innerHTML = "Not Found"
                 }
             }
 
